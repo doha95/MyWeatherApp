@@ -1,0 +1,19 @@
+//
+//  ViewController.swift
+//  MyWeatherApp
+//
+//  Created by Doha Tubaileh on 16/6/2021.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
