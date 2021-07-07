@@ -14,6 +14,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var tempretureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    
     var networkManager = NetworkManager()
     let locationManager = CLLocationManager()
     
@@ -22,10 +23,12 @@ class WeatherViewController: UIViewController {
         // Do any additional setup after loading the view.
         searchTextFeild.delegate = self
         networkManager.delegate = self
+        
+        locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.requestLocation()
         }
     }
     
